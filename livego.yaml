@@ -1,17 +1,22 @@
 # # Logger level
 level: debug
 
+# # Redis
+redis_addr: ":6379"
+
 # # FLV Options
 # flv_dir: "./tmp"
 # httpflv_addr: ":7001"
 
 # # RTMP Options
 # rtmp_addr: ":1935"
-# read_timeout: 10
-# write_timeout: 10
+read_timeout: 1000
+write_timeout: 100000000
+
 
 # # HLS Options
 # hls_addr: ":7002"
+hls_keep_after_end: true
 
 # # API Options
 # api_addr: ":8090"
@@ -19,3 +24,4 @@ server:
 - appname: live
   live: true
   hls: true
+  static_push: ["rtmp://192.168.8.104:1935/live"]

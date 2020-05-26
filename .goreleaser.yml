@@ -2,8 +2,8 @@ before:
   hooks:
     - go mod tidy
 builds:
-  - binary: livego
-    id: livego
+  - binary: radiostreams
+    id: radiostreams
     main: ./main.go
     goos:
       - windows
